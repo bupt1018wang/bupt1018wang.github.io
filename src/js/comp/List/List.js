@@ -51,12 +51,14 @@ class List extends Component {
 
     return artcleList.map((item,index)=>{
       if(artcleType !='全部'&&!this.hasLabel(artcleType,item.labels)) return;
-      console.log(123);
+
       if(type=="artcle"){
         return (
           <span styleName="itemArtcle" key={index}>
+          <Link to={"artcle/"+item.number}>
             <span styleName="title">{item.title}</span>
             <span styleName="time">{ getTime(item.created_at)}</span>
+            </Link>
           </span>
         );
       }else{

@@ -68,3 +68,9 @@ a{
 	vertical-align: middle;
 	display: inline-block;
 }
+
+@media screen and (max-width: 980px) {
+	.home{
+		font-weight: 400;
+	}	
+}
