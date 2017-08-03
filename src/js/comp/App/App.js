@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Router,Route,Link,Redirect,Switch} from 'react-router-dom';
+import {HashRouter as Router,Route,Link,Redirect,Switch} from 'react-router-dom';
 import NProgress from 'nprogress';
 import Home from '../Home/Home';
 import List from '../List/List';
