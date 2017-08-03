@@ -1,0 +1,74 @@
+.box{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	background:#fff;
+}
+
+.dialog{
+	width: 1000px;
+	min-height: 100%;
+	margin:auto;
+	background-color: #fff;
+}
+
+.wrapper{
+	width: 700px;
+	margin: auto;
+	font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+	line-height: 1.62rem;
+	font-size: 0.875rem;
+}
+.wrapper .top{
+	height: 4rem;
+	padding-top: 2rem;
+	text-align: center;
+}
+.wrapper .top .title{
+	color: #e74430;
+	height: 2rem;
+	font-size: 1.2rem;
+	line-height: 2rem;
+	font-weight: 300;
+}
+.wrapper .top .remark{
+	color: #8a8a8a;
+	height: 1.5rem;
+	font-size: 0.75rem;
+	line-height: 1.5rem;
+}
+.wrapper .top .remark .label{
+	margin-right: 1rem;
+	display: inline;
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 0.75rem;
+	color:#eb7350;
+	padding: 0px 4px;
+	border: 1px solid #eb7350;
+	border-radius: 3px;
+}
+.wrapper .content{
+	color: #555;
+	width: 700px;
+	margin: auto;
+
+}
+.wrapper .comments{
+	margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 980px) {
+	.dialog{
+		width: 100%
+	}
+	.wrapper{
+		width: 90%;
+	}
+	.wrapper .content{
+		width: 100%;
+	}
+
+}

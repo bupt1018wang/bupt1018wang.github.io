@@ -1,0 +1,16 @@
+#system
+.DS_Store
+
+
+
+#sublime
+sftp-config.json
+ftpsync.settings
+
+#node
+node_modules
+.svn
+npm-debug.log*
+.babelcache
+
+
