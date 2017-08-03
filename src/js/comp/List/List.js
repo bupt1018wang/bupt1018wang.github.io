@@ -77,7 +77,7 @@ class List extends Component {
                     </div>
                 </div>
                 <div styleName="artcle">
-                  <div styleName="title"><Link to={"/blog/artcle/"+item.number}>{item.title}</Link></div>
+                  <div styleName="title"><Link to={"artcle/"+item.number}>{item.title}</Link></div>
                   <div styleName="content">{body}</div>
                   <div styleName="meta">
                     <div styleName="labels">
@@ -102,7 +102,7 @@ class List extends Component {
     return (
       <div>
         <div styleName="wrapper">
-        <Link to="/blog">
+        <Link to="/">
         <div className="home">
           <div className="home_icon"></div>
           <div className="home_info">bear blog</div>

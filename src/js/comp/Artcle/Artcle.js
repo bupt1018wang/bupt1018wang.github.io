@@ -38,7 +38,7 @@ class Artcle extends Component {
   	let user = artcleInfo.user.login;
     return (
       <div styleName="box">
-      <Link to="/blog">
+      <Link to="/">
       <div className="home">
         <div className="home_icon_g"></div>
         <div className="home_info_g">bear blog</div>

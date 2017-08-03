@@ -45,11 +45,11 @@ class App extends Component {
                 >
                     <div key={location.pathname}>
                     <Switch>
-                      <Route  exact path="/blog/home" component={Home}/>
-                      <Route  exact path="/blog/list" component={List}/> 
-                      <Route  exact path="/blog/guide" component={Guide}/>           
-                      <Route  exact path="/blog/artcle/:number" component={Artcle}/>
-                      <Redirect from="/blog/" to="/blog/home"/>
+                      <Route  exact path="/home" component={Home}/>
+                      <Route  exact path="/list" component={List}/> 
+                      <Route  exact path="/guide" component={Guide}/>           
+                      <Route  exact path="/artcle/:number" component={Artcle}/>
+                      <Redirect from="/" to="/home"/>
                     </Switch>
                     </div>
                 </ReactCSSTransitionGroup>

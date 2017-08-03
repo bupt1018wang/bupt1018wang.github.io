@@ -44,9 +44,9 @@ class Home extends Component {
         <div styleName="mine">
           <div styleName="introduce">
               <div styleName="icons">
-                <Link to="/blog/guide"><span styleName="me"></span></Link>
-                <Link to="/blog/list"><span styleName="list"></span></Link>
-                <Link to="/blog/list"><span styleName="photo"></span></Link>
+                <Link to="/guide"><span styleName="me"></span></Link>
+                <Link to="/list"><span styleName="list"></span></Link>
+                <Link to="/list"><span styleName="photo"></span></Link>
               </div>
               <div styleName="user">{"bear's blog here"}</div>
           </div>
