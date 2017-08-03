@@ -19,20 +19,20 @@ export function getComments (number){
 }
 
 export function postComments (id,content){
-  var cont = JSON.stringify({
+  var cont =JSON.stringify({
     "user":"游客",
     "content":content
   });
   var headers = new Headers();
   headers.append('Accept', 'application/vnd.github.squirrel-girl-preview'); 
   headers.append('Authorization', CONFIG.Authorization); 
-  headers.append('Content-Type','application/x-www-form-urlencoded'); 
+  // headers.append('Content-Type','application/x-www-form-urlencoded;charset=utf-8'); 
   var request = new Request(`https://api.github.com/repos/bupt1018wang/blog/issues/${id}/comments`, {
       headers: headers,
       method:"POST",
       body:JSON.stringify({
-        "body": cont
-})
+          "body":cont
+      })
   });
   return dispatch=>{
     return fetch(request)

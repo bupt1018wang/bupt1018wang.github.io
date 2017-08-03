@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import {CONFIG} from '../config/git_config';
 import home from "./home";
 import list from "./list";
 import artcle from "./artcle";
@@ -12,8 +13,13 @@ let initialState = {
 
 
 export function getArtcleList (){
+  var headers = new Headers();
+  headers.append('Authorization', CONFIG.Authorization); 
   return dispatch=>{
-    return fetch(`https://api.github.com/repos/bupt1018wang/blog/issues`)
+    return fetch(`https://api.github.com/repos/bupt1018wang/blog/issues`,{
+      headers:headers,
+      method:"GET"
+    })
           .then(response => response.json()).then(res=>{
               dispatch({
                 type:"GET_ARTCLE_LIST",

@@ -5,6 +5,7 @@ let initialState = {
 };
 
 export function getArtcleList (){
+  
 	return dispatch=>{
 		return fetch(`https://api.github.com/repos/bupt1018wang/blog/issues`)
 		      .then(response => response.json()).then(res=>{
@@ -18,6 +19,7 @@ export function getArtcleList (){
 }
 
 export function getReactions(){
+
   var headers = new Headers();
   headers.append('Accept', 'application/vnd.github.squirrel-girl-preview'); 
   var request = new Request(`https://api.github.com/repos/bupt1018wang/blog/issues/1/reactions`, {

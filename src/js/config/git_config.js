@@ -1,5 +1,5 @@
 export const CONFIG = {
 	owner:"bupt1018wang",
 	repo:"blog",
-	Authorization: "token 0489fc2c86e7164e6b7c2ef1c605a296ff0cc0ee"
+	Authorization: "token d8301e8e3e9fbb21838d45bc099b815686c1e0a3"
 };
