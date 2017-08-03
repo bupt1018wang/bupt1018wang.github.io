@@ -74,7 +74,7 @@ a{
 
 @media screen and (max-width: 980px) {
 	body{
-		font-family:  Arial,'微软雅黑';
+		font-family:  sans-serif,'微软雅黑';
 	}
 	.home{
 		font-weight: 400;
