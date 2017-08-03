@@ -4,6 +4,7 @@ html,body{
 	background-color:#f5f5f5;
 	color: #666;
 	height: 100%;
+
 }
 *{
 	-webkit-tap-highlight-color:transparent;
@@ -66,13 +67,15 @@ a{
 }
 .home_info_g{
 	color: #666;
-	font-size: 0.75rem;
 	margin-left: 0.2rem;
 	vertical-align: middle;
 	display: inline-block;
 }
 
 @media screen and (max-width: 980px) {
+	body{
+		font-family:  Arial,'微软雅黑';
+	}
 	.home{
 		font-weight: 400;
 		font-family: Arial;
