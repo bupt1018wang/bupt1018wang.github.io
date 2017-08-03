@@ -5,6 +5,9 @@ html,body{
 	color: #666;
 	height: 100%;
 }
+*{
+	-webkit-tap-highlight-color:transparent;
+}
 textarea{
 	resize: none;
 }
@@ -72,5 +75,6 @@ a{
 @media screen and (max-width: 980px) {
 	.home{
 		font-weight: 400;
+		font-family: Arial;
 	}	
 }
