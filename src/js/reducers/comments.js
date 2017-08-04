@@ -25,9 +25,9 @@ export function postComments (id,content){
   });
   var headers = new Headers();
   headers.append('Accept', 'application/vnd.github.squirrel-girl-preview'); 
-  headers.append('Authorization', CONFIG.Authorization); 
+
   // headers.append('Content-Type','application/x-www-form-urlencoded;charset=utf-8'); 
-  var request = new Request(`https://api.github.com/repos/bupt1018wang/blog/issues/${id}/comments`, {
+  var request = new Request(`https://api.github.com/repos/bupt1018wang/blog/issues/${id}/comments?client_id=d3a5c10f9a2618727eb0&client_secret=97b17c7e6dbd6e33a39890f7e338e06c337d1104`, {
       headers: headers,
       method:"POST",
       body:JSON.stringify({

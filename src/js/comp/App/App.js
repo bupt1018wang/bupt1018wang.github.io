@@ -8,28 +8,20 @@ import Artcle from '../Artcle/Artcle';
 import Guide from '../Guide/Guide';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import  '../../../css/index.css';
-import {getUserInfo} from '../../reducers/index';
+import {getToken} from '../../reducers/index';
 
-
-// const routes = [
-//   { path: '/list',
-//     component: List
-//   },
-//   { path: '/home',
-//     component: Home,
-//     routes: [
-//       { path: '/list',
-//         component: List
-//       },
-//     ]
-//   }
-// ]
 class App extends Component {
   constructor(props) {
     super(props);
   }
+   componentWillMount(){
+    console.log(this.props);
+    if(this.props.token==""){
+        this.props.getToken();
+    }
+   }
   componentDidMount() {
-    //this.props.getUserInfo();
+
   }
 
   componentWillReceiveProps(nextProps) {
@@ -65,13 +57,13 @@ class App extends Component {
 };
 
 const mapStateToProps =(state)=> {
-  const userInfo = state.userInfo;
-  return {userInfo};
+  const token = state.index.token;
+  return {token};
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    getUserInfo: () => {
-      dispatch(getUserInfo());
+    getToken: () => {
+      dispatch(getToken());
     }
   };
 }

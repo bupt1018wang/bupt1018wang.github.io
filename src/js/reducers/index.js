@@ -6,19 +6,28 @@ import artcle from "./artcle";
 import comments from "./comments";
 import guide from "./guide";
 let initialState = {
-  userInfo:{
-    user:"王叔叔"
-  }
+  token:""
 };
 
+function getQueryString(name) {
+    var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null) {
+        return unescape(r[2]);
+    }
+    return null;
+}
+export function getToken (){
+  var code = getQueryString("code");
 
-export function getUserInfo (){
   var headers = new Headers();
-  headers.append('Authorization', CONFIG.Authorization); 
+ 
   return dispatch=>{
-    return fetch(`https://api.github.com/user?access_token=${CONFIG.Authorization}`)
-          .then(response => response.json()).then(res=>{
-            console.log(res);
+    return fetch(`https://github.com/login/oauth/access_token?client_id=d3a5c10f9a2618727eb0&client_secret=97b17c7e6dbd6e33a39890f7e338e06c337d1104&code=${code}`,{
+        mode: "cors"
+    })
+          .then(response => response).then(res=>{
+            console.log(res.text);
               // dispatch({
               //   type:"GET_ARTCLE_LIST",
               //   artcleList:res
