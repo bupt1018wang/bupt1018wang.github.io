@@ -31,7 +31,7 @@ export function postComments (id,content){
       headers: headers,
       method:"POST",
       body:JSON.stringify({
-          "body":cont
+        body:cont
       })
   });
   return dispatch=>{

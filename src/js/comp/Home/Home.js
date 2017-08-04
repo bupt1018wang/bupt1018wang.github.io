@@ -14,6 +14,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+   
     this.timerID = setInterval(
       () => this.tick(),
       1000

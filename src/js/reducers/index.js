@@ -12,6 +12,22 @@ let initialState = {
 };
 
 
+export function getUserInfo (){
+  var headers = new Headers();
+  headers.append('Authorization', CONFIG.Authorization); 
+  return dispatch=>{
+    return fetch(`https://api.github.com/user?access_token=${CONFIG.Authorization}`)
+          .then(response => response.json()).then(res=>{
+            console.log(res);
+              // dispatch({
+              //   type:"GET_ARTCLE_LIST",
+              //   artcleList:res
+              // });
+            }
+            );
+      };
+}
+
 export function getArtcleList (){
   var headers = new Headers();
   headers.append('Authorization', CONFIG.Authorization); 

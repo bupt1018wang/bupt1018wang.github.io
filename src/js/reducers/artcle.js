@@ -9,7 +9,7 @@ export function getArtcleInfo (number){
   headers.append('Authorization', CONFIG.Authorization); 
 	return dispatch=>{
 		return fetch(`https://api.github.com/repos/bupt1018wang/blog/issues/${number}`)
-    .then(response => response.json()).then(res=>{
+		      .then(response => response.json()).then(res=>{
 		      		dispatch({
 		      			type:"GET_ARTCLE_INFO",
                 artcleInfo:res

@@ -30,6 +30,8 @@ class Comments extends Component {
       }); 
     }
 
+    this.refs.comment.value = "";
+
   } 
   componentDidMount() {
     let text = this.refs.comment;

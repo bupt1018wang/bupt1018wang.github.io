@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import {HashRouter as Router,Route,Link,Redirect,Switch} from 'react-router-dom';
 import NProgress from 'nprogress';
 import Home from '../Home/Home';
@@ -7,6 +8,7 @@ import Artcle from '../Artcle/Artcle';
 import Guide from '../Guide/Guide';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 import  '../../../css/index.css';
+import {getUserInfo} from '../../reducers/index';
 
 
 // const routes = [
@@ -23,10 +25,11 @@ import  '../../../css/index.css';
 //   }
 // ]
 class App extends Component {
-
-
+  constructor(props) {
+    super(props);
+  }
   componentDidMount() {
-
+    //this.props.getUserInfo();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -61,10 +64,17 @@ class App extends Component {
   }
 };
 
-// mapStateToProps = (state) =>{
-//   console.log(state);
-//   const userInfo = state.userInfo;
-//   return {userInfo};
-// }
+const mapStateToProps =(state)=> {
+  const userInfo = state.userInfo;
+  return {userInfo};
+}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getUserInfo: () => {
+      dispatch(getUserInfo());
+    }
+  };
+}
 
-export default App;
+
+export default connect(mapStateToProps,mapDispatchToProps)(App);
