@@ -40,15 +40,13 @@
 	line-height: 1.5rem;
 }
 .wrapper .top .remark .label{
-	margin-right: 1rem;
+	margin-right: 0.5rem;
 	display: inline;
 	font-weight: 400;
 	font-size: 0.75rem;
 	line-height: 0.75rem;
-	color:#eb7350;
-	padding: 0px 4px;
-	border: 1px solid #eb7350;
-	border-radius: 3px;
+	padding-right: 0.5rem;
+	border-right: 1px solid #8a8a8a;
 }
 .wrapper .content{
 	color: #555;

@@ -15,10 +15,7 @@ class App extends Component {
     super(props);
   }
    componentWillMount(){
-    console.log(this.props);
-    if(this.props.token==""){
-        this.props.getToken();
-    }
+
    }
   componentDidMount() {
 
@@ -57,14 +54,11 @@ class App extends Component {
 };
 
 const mapStateToProps =(state)=> {
-  const token = state.index.token;
-  return {token};
+  return {};
 }
 const mapDispatchToProps = (dispatch) => {
   return {
-    getToken: () => {
-      dispatch(getToken());
-    }
+
   };
 }
 
