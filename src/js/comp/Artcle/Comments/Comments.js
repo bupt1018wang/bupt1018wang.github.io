@@ -19,7 +19,17 @@ class Comments extends Component {
 
   } 
   componentDidMount() {
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
     // let text = this.refs.comment;
     // this.autoTextarea(text);
 
@@ -32,8 +42,8 @@ class Comments extends Component {
 
     return (
       <div>
-        <div styleName="notice">tips:移动端微信登陆貌似有些问题,请见谅TAT</div>
-        <div id="uyan_frame">
+        <div styleName="notice">tips:移动端使用简单评论最佳,其他有点小问题TAT</div>
+        <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUwMC83MDU0">
 
         </div>
       </div>
