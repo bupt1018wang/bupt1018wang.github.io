@@ -29,6 +29,11 @@ class Artcle extends Component {
   } 
   componentDidMount() {
   }
+  buildLabel(){
+    if(this.state.artcleInfo.labels.length!=0){
+      return <span styleName="label">{this.state.artcleInfo.labels[0].name}</span>;
+    }
+  }
 
 
   render() {
@@ -49,7 +54,7 @@ class Artcle extends Component {
             <div styleName="top">
               <div styleName="title">{artcleInfo.title}</div>
               <div styleName="remark">
-                <span styleName="label">{artcleInfo.labels[0].name}</span>
+                {this.buildLabel()}
                 <span>{created_at}</span>
               </div>
             </div>

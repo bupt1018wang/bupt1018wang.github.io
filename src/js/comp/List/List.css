@@ -202,8 +202,9 @@
 	}
 	.card{
 		padding: 0.625rem 1rem;
-		border-radius:0px;
-		width: 100%;
+		border-radius:.5rem;
+		width: 95%;
+		background: #f1e8db;
 		margin-top: 0.2rem;
 		margin-bottom: 0px;
 	}
