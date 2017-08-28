@@ -48,7 +48,33 @@ class List extends Component {
     let artcleList = this.state.artcleList;
     let type = this.state.type;
     let artcleType = this.state.artcleType;
-
+    if(artcleList.length==0){
+      return (
+      <div>
+      <span styleName='tips'>点击标签可以切换到相应类别下的文章</span>
+      <div className="spinner">
+        <div className="spinner-container container1">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
+        </div>
+        <div className="spinner-container container2">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
+        </div>
+        <div className="spinner-container container3">
+          <div className="circle1"></div>
+          <div className="circle2"></div>
+          <div className="circle3"></div>
+          <div className="circle4"></div>
+        </div>
+      </div>
+      </div>
+        );
+    }
     return artcleList.map((item,index)=>{
       if(artcleType !='全部'&&!this.hasLabel(artcleType,item.labels)) return;
 
@@ -85,10 +111,6 @@ class List extends Component {
                     <div styleName="labels">
                       {labels}
                     </div>
-                    <div styleName="info">
-                        <span styleName="comment_icon"></span>
-                        <span styleName="comment">{item.comments}</span>
-                    </div>
                   </div>
                 </div>
             </div>
@@ -113,7 +135,6 @@ class List extends Component {
           <div styleName="top_title">
             <div styleName="icon"></div>
             <span styleName="info">{this.state.artcleType}</span>
-            <span styleName="choose"></span>
             <span onClick={this.changeType.bind(this)} styleName="change">切换模式</span>
           </div>
            {this.buildArtcleList()}

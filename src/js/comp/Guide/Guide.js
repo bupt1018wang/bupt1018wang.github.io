@@ -29,7 +29,7 @@ class Guide extends Component {
   render() {
     return (
       <div className="wrapper" styleName="wrapper">
-          准备做点儿好玩的东西
+          这个页面儿还在捣弄
       </div>
     );
   }

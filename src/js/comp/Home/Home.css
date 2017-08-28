@@ -31,12 +31,12 @@
 	font-size: 0.875rem;
 }
 .mine{
-	width: 20rem;
+	width: 12rem;
 	height: 15rem;
 	position: absolute;
 	top: 70%;
 	left: 50%;
-	margin-left: -10.625rem;
+	margin-left: -6.625rem;
 	margin-top: -7.5rem;
 	padding: 0.625rem;
 }
@@ -69,7 +69,6 @@
 .icons a{
 	flex:1;
 	display: inline-block;	
-	margin:0 1rem;
 }
 .icons a span{
 	background-color: #a89e9c;
@@ -82,6 +81,10 @@
 	animation-name:container; /*动画的名称*/
     transform-origin: center bottom; /*设置动画旋转元素的基点为：居中靠下*/
     cursor: pointer;
+}
+
+.icons a{
+	color:#f1e8db;
 }
 .me{
 	margin-top: -0.4rem;

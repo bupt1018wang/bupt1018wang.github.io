@@ -41,8 +41,11 @@ class Comments extends Component {
   render() {
 
     return (
-      <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUwMC83MDU0">
+      <div>
+        <div styleName="notice">tips:移动端微信登陆貌似有些问题,请见谅TAT</div>
+        <div id="lv-container" data-id="city" data-uid="MTAyMC8zMDUwMC83MDU0">
 
+        </div>
       </div>
     );
   }

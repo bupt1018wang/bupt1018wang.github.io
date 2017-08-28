@@ -19,26 +19,7 @@ export function getArtcleList (){
 			};
 }
 
-export function getReactions(){
 
-  var headers = new Headers();
-  headers.append('Accept', 'application/vnd.github.squirrel-girl-preview'); 
-  var request = new Request(`https://api.github.com/repos/bupt1018wang/bupt1018wang.github.io/issues/1/reactions`, {
-      headers: headers,
-      method:"GET"
-  });
-  return dispatch=>{
-    return fetch(request)
-          .then(response => response.json()).then(res=>{
-              dispatch({
-                type:"GET_ARTCLE_LIST",
-                artcleList:res
-              });
-            }
-            );
-    };
-      
-}
 export default function reducers(state=initialState,action){
   switch (action.type) {
     // case "GET_ARTCLE_LIST":

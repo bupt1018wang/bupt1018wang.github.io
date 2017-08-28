@@ -84,21 +84,28 @@
 	border-top: 1px solid #f1e8db;
 }
 .itemArtcle .title{
-
+	font-size: 0.875rem;
 }
 .itemArtcle .time{
 	float: right;
 	margin-right: 0;
 	font-size: 0.875rem;
 }
+.tips{
+	font-size: 0.75rem;
+	display: block;
+	text-align: center;
+	color: #f1e8db;
+	padding-top: 2rem;
+}
 .card{
 	box-sizing:border-box;
+	background: #f1e8db;
 	width: 39rem;
 	margin: auto;
 	margin-top: 1rem;
 	margin-bottom: 1rem;
 	padding: 0.8rem 2rem;
-	background-color: #fff;
 	border-radius: 5px;
 	color: #a89e9c;
 }
@@ -204,7 +211,6 @@
 		padding: 0.625rem 1rem;
 		border-radius:.5rem;
 		width: 95%;
-		background: #f1e8db;
 		margin-top: 0.2rem;
 		margin-bottom: 0px;
 	}
