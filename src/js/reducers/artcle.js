@@ -8,7 +8,7 @@ export function getArtcleInfo (number){
   var headers = new Headers();
   headers.append('Authorization', CONFIG.Authorization); 
 	return dispatch=>{
-		return fetch(`https://api.github.com/repos/bupt1018wang/blog/issues/${number}`)
+		return fetch(`https://api.github.com/repos/bupt1018wang/bupt1018wang.github.io/issues/${number}`)
 		      .then(
               response => response.json()).then(res=>{
 
